@@ -54,12 +54,36 @@ exports.seed = function(knex, Promise) {
           venue_id: knex('venues').where('name', 'Gothic Theater').select('id')
         }),
         knex('events').insert({
-          title: 'The Faint',
-          description: 'Presented by Channel 93.3 and Twist & Shout, The Faint performs with Gang of Four and Pictureplane.',
+          title: 'B. Dolan',
+          description: 'B. Dolan returns to Colorado with Strange Famous labelmate Wheelchair Sports Camp.',
           over_21: false,
-          start_datetime: 'October 29 20:00:00 2016 MST',
-          end_datetime: 'October 29 23:30:00 2016 MST',
+          start_datetime: 'October 19 20:00:00 2016 MST',
+          end_datetime: 'October 19 23:00:00 2016 MST',
           venue_id: knex('venues').where('name', 'Oriental Theater').select('id')
+        }),
+        knex('events').insert({
+          title: 'Ruin and Rose',
+          description: 'Acclaimed writer/director Ben Sturgulewski joins the award-winning team at Matchstick Productions and their two decades of filmmaking expertise to deliver “RUIN AND ROSE,” an epic creative vision brought to life by the talents of the world’s top skiers. Winter landscapes across the planet contrast seamlessly with a thoroughly-crafted story of environmental apocalypse, shot entirely within the otherworldly expanses of Africa’s Skeleton Coast. Unlike anything seen before, the dreamlike setting of this film sparks the imagination of not only action sports enthusiasts, but anyone with a beating heart.',
+          over_21: false,
+          start_datetime: 'October 27 20:00:00 2016 MST',
+          end_datetime: 'October 27 23:00:00 2016 MST',
+          venue_id: knex('venues').where('name', 'Oriental Theater').select('id')
+        }),
+        knex('events').insert({
+          title: 'The Mountain Goats (Duo)',
+          description: 'The breakdown on this is I\'m presenting Targets at Alamo Drafthouse in October and Peter and me are playing some music. We\'ve never done a duo show in Denver; we\'ll be in a smaller room than we usually play out there, so if you wanna see some new and old tunes in the old school style, I recommend getting tickets early. See you there!',
+          over_21: true,
+          start_datetime: 'October 29 21:00:00 2016 MST',
+          end_datetime: 'October 30 01:45:00 2016 MST',
+          venue_id: knex('venues').where('name', 'The Hi-Dive').select('id')
+        }),
+        knex('events').insert({
+          title: 'Eldren',
+          description: 'A psychedelic dream rock super pop soundgasm that will grip your eyes and ears and leave you trembling with a sense of wonder and want. Honing their craft in Denver, Colorado’s burgeoning music community, and captivating audiences nationwide, Eldren are prepared to charge into your life and forge fire in your heart.',
+          over_21: true,
+          start_datetime: 'November 5 21:30:00 2016 MST',
+          end_datetime: 'November 6 01:45:00 2016 MST',
+          venue_id: knex('venues').where('name', 'The Hi-Dive').select('id')
         }),
       ]);
     });
