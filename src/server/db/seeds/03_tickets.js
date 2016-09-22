@@ -22,6 +22,11 @@ exports.seed = function(knex, Promise) {
         }),
         knex('tickets').insert({
           name: 'General Admission',
+          price: 49.99,
+          event_id: knex('events').where('title', 'Mac Miller').select('id')
+        }),
+        knex('tickets').insert({
+          name: 'General Admission',
           price: 39.99,
           event_id: knex('events').where('title', 'Schoolboy Q & Joey Bada$$').select('id')
         }),
